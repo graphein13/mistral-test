@@ -1,0 +1,29 @@
+{
+  "name": "mistral-tests",
+  "version": "1.0.0",
+  "description": "Tests automatisés E2E, d'accessibilité et de performance pour le projet mistral",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:auth": "playwright test tests/authentication/",
+    "test:calendar": "playwright test tests/calendar/",
+    "test:accessibility": "playwright test tests/accessibility/",
+    "test:performance": "playwright test tests/performance/",
+    "test:ci": "playwright test --config=playwright.config.ci.ts",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "e2e",
+    "accessibility",
+    "performance",
+    "angular"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@axe-core/playwright": "^4.8.1",
+    "@playwright/test": "^1.40.0"
+  }
+}
